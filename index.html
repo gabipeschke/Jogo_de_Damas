@@ -9,23 +9,39 @@
 </head>
 <body>
     <h1>JOGO DE DAMAS</h1>
-        <div id="nomeJogadores">
+        <div id="nomeJogador1">
             Nome do Jogador 1:
-            <input type="text" name="txtname_j1" id="txtname_j2" placeholder="Digite o nome do jogador 1 aqui"value="">
-            <p>
+            <input type="text" class = "n_Jogadores" name="txtname_j1" id="txtname_j1" placeholder="Digite o nome do jogador 1 aqui"value="">
+            <p id="pecas_escolher">
                 Peças:
-                
-            </p>
-            
+                <input type="radio" name="radBlack" id="j1_black"checked onclick="removeChecked_j1White()
+                ">
+                <label for="j1_black">Preto</label>
 
-        </div>
-        <div id="nomeJogadores">
-            Nome do Jogador 2:
-            <input type="text" name="txtname_j1" id="txtname_j2" placeholder="Digite o nome do jogador 2 aqui"value="">
-            <p>
-                Peças:
+                <input type="radio" name="radWhite" id="j1_white" onclick="removeChecked_j1Black()
+                ">
+                <label for="j1_white">Branco</label>
             </p>
         </div>
+        <div id="nomeJogador2">
+            Nome do Jogador 2:
+            <input type="text" class = "n_Jogadores" name="txtname_j2" id="txtname_j2" placeholder="Digite o nome do jogador 2 aqui"value="">
+            <p id="pecas_escolher">
+                Peças:
+                <input type="radio" name="radBlack" id="j2_black" onclick="removeChecked_j2White()
+                ">
+                <label for="j2_black">Preto</label>
+
+                <input type="radio" name="radWhite" id="j2_white" checked onclick="removeChecked_j2Black()
+                ">
+                <label for="j2_white">Branco</label>
+            </p>
+        </div>
+        <div>
+            <input id = "startButton"type="button" value="Começar o jogo">
+        </div>
+        
+        
         
         
     
