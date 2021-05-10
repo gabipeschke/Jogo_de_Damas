@@ -1,3 +1,4 @@
+/*Geral*/
 body{
     background-color: rgb(116, 53, 53);
     font: normal 25px Arial;
@@ -14,26 +15,20 @@ h1{
 
 
 /*text + input nome - index.html*/
-div#nomeJogador1{
+div.nomeJogadores{
     color: rgb(214, 214, 214);
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 60px;
     padding-bottom: 10px;
     padding-right: 30px;
-    float: left;
-    
+    display: inline-block;
 }
-div#nomeJogador2{
-    color: rgb(214, 214, 214);
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 60px;
-    padding-bottom: 10px;
-    padding-right: 30px;
+div#nomeJogador1{
+    float: left;
 }
 
-/*<p> escolha de peças - index.html*/
-p#pecas_escolher{
-    font: normal 17px Arial;
+div#nomeJogador2{
+    float: none;
 }
 
 
@@ -47,14 +42,26 @@ input.n_Jogadores{
     height: 20px;
     font: normal 17px Arial;
     color: rgb(92, 92, 92);
+    box-shadow: 3px 2px 10px rgba(0, 0, 0,0.2);
 }
 
 input.n_Jogadores:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
+    border: none;
     outline: 0;
 } 
 
+
+/*<p> escolha de peças - index.html*/
+p#pecas_escolher{
+    font: normal 17px Arial;
+    margin-left: 233.48px;
+}
+
+.colorPeca:hover{
+    cursor: pointer;
+}
+
+/*start button -index.html*/
 input#startButton{
     border-radius: 25px;
     background: #ffffff;
@@ -68,27 +75,13 @@ input#startButton{
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    box-shadow: 3px 2px 10px rgba(0, 0, 0,0.2);
     
 }
 
-
-/*tabuleiro*/
-table#tabuleiro{
-    width: 1000px;
-    height: 800px;
-    border: 20px solid rgb(255, 255, 255);
-    margin: auto;
+input#startButton:hover{
+    background-color:rgba(0, 0, 0, 0.171);
+    color: rgb(175, 175, 175);
+    cursor: pointer;
+    box-shadow: inset 3px 2px 10px rgba(0, 0, 0,0.2);
 }
-
-th#preto{
-    background-color: black;
-    width:100px;
-    height:100px;
-}
-
-th#branco{
-    background-color: white;
-    width:100px;
-    height: 100px;
-}
-

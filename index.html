@@ -5,48 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Damas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>JOGO DE DAMAS</h1>
-        <div id="nomeJogador1">
+        <div id="nomeJogador1" class="nomeJogadores">
+
             Nome do Jogador 1:
-            <input type="text" class = "n_Jogadores" name="txtname_j1" id="txtname_j1" placeholder="Digite o nome do jogador 1 aqui"value="">
+            <input type="text" class = "n_Jogadores" name="txtname_j1" id="txtname_j1" placeholder="Digite o nome do jogador 1 aqui">
+
             <p id="pecas_escolher">
                 Peças:
-                <input type="radio" name="radBlack" id="j1_black"checked onclick="removeChecked_j1White()
+                <input type="radio" name="radj1" class="colorPeca"id="j1_black"checked value="black"
+                onclick="j1Black_Checked()
                 ">
                 <label for="j1_black">Preto</label>
 
-                <input type="radio" name="radWhite" id="j1_white" onclick="removeChecked_j1Black()
+                <input type="radio" name="radj1" class="colorPeca"id="j1_white" value="white" onclick="j1White_Checked()
                 ">
                 <label for="j1_white">Branco</label>
             </p>
+
         </div>
-        <div id="nomeJogador2">
+        <div id="nomeJogador2" class="nomeJogadores">
             Nome do Jogador 2:
-            <input type="text" class = "n_Jogadores" name="txtname_j2" id="txtname_j2" placeholder="Digite o nome do jogador 2 aqui"value="">
+            <input type="text" class = "n_Jogadores" name="txtname_j2" id="txtname_j2" placeholder="Digite o nome do jogador 2 aqui">
             <p id="pecas_escolher">
                 Peças:
-                <input type="radio" name="radBlack" id="j2_black" onclick="removeChecked_j2White()
+                <input type="radio" name="radj2" class="colorPeca" id="j2_black" value="black"onclick="j2Black_Checked()
                 ">
                 <label for="j2_black">Preto</label>
 
-                <input type="radio" name="radWhite" id="j2_white" checked onclick="removeChecked_j2Black()
+                <input type="radio" name="radj2" class="colorPeca"id="j2_white" value="white"checked onclick="j2White_Checked()
                 ">
                 <label for="j2_white">Branco</label>
             </p>
         </div>
         <div>
-            <input id = "startButton"type="button" value="Começar o jogo">
+            <input id = "startButton"type="button" onclick = "startGame()" value="Começar o jogo">
         </div>
-        
-        
-        
-        
-    
-            
-    
-    <script src="script.js"></script>
+    <script src="dama.js"></script>
 </body>
 </html>
