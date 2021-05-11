@@ -7,10 +7,14 @@
     <title>Jogo de Damas</title>
     <link rel="stylesheet" href="dama.css">
 </head>
-<body>
+<body onload="carregarDados()">
     <h1>JOGO DE DAMAS</h1>
+
+    <div class="panel" id="panelj1">
+        <p class ="placeName" id="namej1"></p>
+
+    </div>
     <div id="tabuleiro">
-        
         <table id="tabuleiro">
             <tr id="linha">
               <th id="preto"></th>
@@ -21,7 +25,7 @@
               <th id="branco"></th>
               <th id="preto"></th>
               <th id="branco"></th>
-              <th id="preto"></th>
+              
             </tr>
             <tr id="linha">
                 <th id="branco"></th>
@@ -32,7 +36,7 @@
                 <th id="preto"></th>
                 <th id="branco"></th>
                 <th id="preto"></th>
-                <th id="branco"></th>
+                
             </tr>
             <tr id="linha">
                 <th id="preto"></th>
@@ -43,7 +47,7 @@
                 <th id="branco"></th>
                 <th id="preto"></th>
                 <th id="branco"></th>
-                <th id="preto"></th>
+                
             </tr>
             <tr id="linha">
                 <th id="branco"></th>
@@ -54,7 +58,7 @@
                 <th id="preto"></th>
                 <th id="branco"></th>
                 <th id="preto"></th>
-                <th id="branco"></th>
+                
             </tr>
             <tr id="linha">
                 <th id="preto"></th>
@@ -65,7 +69,7 @@
                 <th id="branco"></th>
                 <th id="preto"></th>
                 <th id="branco"></th>
-                <th id="preto"></th>
+                
             </tr>
             <tr id="linha">
                 <th id="branco"></th>
@@ -76,7 +80,7 @@
                 <th id="preto"></th>
                 <th id="branco"></th>
                 <th id="preto"></th>
-                <th id="branco"></th>
+                
             </tr>
             <tr id="linha">
                 <th id="preto"></th>
@@ -87,7 +91,7 @@
                 <th id="branco"></th>
                 <th id="preto"></th>
                 <th id="branco"></th>
-                <th id="preto"></th>
+                
             </tr>
             <tr id="linha">
                 <th id="branco"></th>
@@ -98,12 +102,17 @@
                 <th id="preto"></th>
                 <th id="branco"></th>
                 <th id="preto"></th>
-                <th id="branco"></th>
+                
             </tr>
-          </table>
-        
-            
+          </table> 
     </div>
+    <div class="panel"id="panelj2">
+        <p class ="placeName"id="namej2"></p>
+    </div>
+    
+    
+
+
     <script src="dama.js"></script>
 </body>
 </html>

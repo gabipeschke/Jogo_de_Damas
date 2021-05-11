@@ -4,6 +4,8 @@ body{
     font: normal 25px Arial;
     padding-top: 40px;
     padding-left: 60px;
+    padding-right: 60px;
+   
     
 }
 
@@ -13,24 +15,52 @@ h1{
     display: block;
 }
 
+/*Paineis*/
+div.panel{
+    height: 700px;
+    width: 409px;
+    box-shadow:  3px 2px 10px rgba(0, 0, 0,0.4);
+    background-color: rgb(133, 64, 64);
+}
+/* Painel do jogador 1*/
+div#panelj1{
+float: left;
+}
+
+/* Painel do jogador 2*/
+div#panelj2{
+    float: right;
+}
+p.placeName{
+    color: rgb(214, 214, 214);
+    font: normal 40px Arial;
+    text-align: center;
+    margin-top: 20px;
+
+}
+    
 
 /*Tabuleiro*/
 table#tabuleiro{
-    width: 1000px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     border: 20px solid rgb(255, 255, 255);
-    margin: auto;
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
+    float: left;
+    
 }
 
 th#preto{
     background-color: black;
-    width:100px;
-    height:100px;
+    width:50px;
+    height:50px;
 }
 
 th#branco{
     background-color: white;
-    width:100px;
-    height: 100px;
+    width:50px;
+    height: 50px;
 }
 
