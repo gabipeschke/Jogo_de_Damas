@@ -1,35 +1,53 @@
-var input_j1 = document.getElementById("txtname_j1")
-let input_j2 = document.querySelector("input#txtname_j2")
-let j1_color = document.getElementsByName("radj1")
-let j2_color = document.getElementsByName("radj2")
 /*
 
-index page
+index.html
 
-*/ 
-let startButton = document.querySelector("input#startButton")
+ */
+
+//função que cria os objetos j1 e j2 e direciona para dama.html
+function startGame(){
+    let input_j1 = document.querySelector("input#txtname_j1")
+    let input_j2 = document.querySelector("input#txtname_j2")
+    let j1_color = document.getElementsByName("radj1")
+
+    let j1 = new Object()
+    let j2 = new Object()
+
+    j1.name = input_j1.value
+    j2.name = input_j2.value
+
+    if(j1_color[0].checked){
+        j1.color = 'black'
+        j2.color = 'white'
+    }else{
+        j1.color = 'white'
+        j2.color = 'black'
+    }
+    j1.pieces = 12
+    j2.pieces = 12
+    
+    /*alert(`J1: ${j1.name}  ${j1.color}  ${j1.pieces}\nJ2: ${j2.name}  ${j2.color}  ${j2.pieces = 12}`)*/
+    window.location.href = "dama.html"
+}
 
 
-//Dar enter no input no jogador1 dá um focus() no input do jogador2
-/*
-input_j1.addEventListener("keyup", function(event){
+//Dar enter no input no jogador 1 dá um focus() no input do jogador2
+
+document.querySelector("input#txtname_j1").addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-        event.preventDefault();
-        input_j2.focus()
+        event.preventDefault()
+        document.querySelector("input#txtname_j2").focus()
     }
 })
 
-//Dar enter no input no jogador2 apertará o startButton*
-input_j2.addEventListener("keyup", function(event){
+//Dar enter no input no jogador2 apertará o startButton
+document.querySelector("input#txtname_j2").addEventListener("keyup", function(event){
     if(event.keyCode ===13){
         event.preventDefault();
-        startButton.click();
+        startButton.click()
     }
 })
-*/ 
-function startGame(){
-    alert("value inside:"+ input_j1.value)
-}
+
 
 //para não ser possível selecionar um único jogador selecionar duas cores
 function j1Black_Checked(){
@@ -49,3 +67,4 @@ function j2White_Checked(){
     document.getElementById("j1_white").checked = false;
     document.getElementById("j1_black").checked = true;
 }
+
